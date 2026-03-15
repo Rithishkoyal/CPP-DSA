@@ -14,19 +14,19 @@ struct Node{
 };
 //Recursive soln
 
-void preOrder(Node* root){
+void inOrder(Node* root){
     
     if(root==NULL){
         return;
     }
-    preOrder(root->left);
+    inOrder(root->left);
     cout<<root->data<<" ";
-    preOrder(root->right);
+    inOrder(root->right);
 }
 
 //Iterative Soln
 
-void iterativepreOrder(Node* root){
+void iterativeInOrder(Node* root){
     cout<<"Iterative soln"<<endl; 
     // if root is NULL, then return
     if(root==NULL){
@@ -63,8 +63,8 @@ int main()
     root->right       = new Node(3);
     root->left->left  = new Node(4);
     root->left->right = new Node(5); 
-   preOrder(root);
-  iterativepreOrder(root);
+   inOrder(root);
+  iterativeInOrder(root);
 
     return 0;
 }
